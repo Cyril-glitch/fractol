@@ -3,7 +3,7 @@
 # 🌀 fract'ol - Technical Documentation
 
 <p align="center">
-  <img src="./assets/demo.gif" alt="Fractol Demo" width="600">
+  <img src="./assets/demo.gif" alt="Fractol Demo" width="800">
 </p>
 
 ## 1. Description
