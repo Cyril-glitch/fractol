@@ -52,15 +52,6 @@ The development of this project required a balance between mathematical precisio
 
 <br />
 
-### 🤖 AI Usage & Methodology
-In accordance with the 42 curriculum guidelines:
-* **Tasks**: AI was used to assist in designing the `rules()` display logic and to clarify the bit-shifting required for custom T-R-G-B color gradients.
-* **Validation**: All logic, especially the event handling for keyboard-based parameter modification, was manually verified and tested against the project requirements.
-
----
-
-<br />
-
 ### 🔗 Useful Links
 * **[Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set)**: Understanding the foundation of the escape time algorithm.
 * **[The Julia Set](https://en.wikipedia.org/wiki/Julia_set)**: Relationship between $c$ parameters and fractal shapes.
