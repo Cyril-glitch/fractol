@@ -6,7 +6,7 @@
 /*   By: cycolonn <cycolonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:27:46 by cycolonn          #+#    #+#             */
-/*   Updated: 2025/12/31 12:24:36 by cycolonn         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:43:26 by cycolonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 
 # include "../inc/libft.h"
 # include <stdarg.h>
-# include <unistd.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_flags
 {
-	int	minus;
-	int	zero;
-	int	dot;
-	int	hash;
-	int	space;
-	int	plus;
-	int	precision;
-	int	WIDTH;
-}	t_flags;
+	int		minus;
+	int		zero;
+	int		dot;
+	int		hash;
+	int		space;
+	int		plus;
+	int		precision;
+	int		width;
+}			t_flags;
 
 typedef struct s_format
 {
@@ -37,7 +37,7 @@ typedef struct s_format
 	char	*precise;
 	char	*zeropad;
 	char	*mid;
-}	t_format;
+}			t_format;
 
 // main function
 int			ft_printf(const char *str, ...);

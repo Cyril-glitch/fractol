@@ -242,7 +242,7 @@ write(1, "\n\n", 2);
    int res = 0;
 
 //test %c
-//flag autorise - et WIDTH
+//flag autorise - et widht
 int				c = 'a';
 resft = ft_printf("test %%c = |%-20c|\n",c);
 res = printf("test %%c = |%-20c|\n",c);
@@ -323,7 +323,7 @@ printf("\n\n");
 
 
 //test %p
-//flas autorise - et WIDTH
+//flas autorise - et widht
 char			*p = "hello";
 resft = ft_printf("test %%p = |%-30.2p|\n",p);
 res = printf("test %%p = |%-30.2p|\n",p);

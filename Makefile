@@ -1,15 +1,20 @@
 NAME = bin/fractol
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g -O3 #-fsanitize=address
 
 LIBDIR = ./libft/
 LIB = ./libft/lib/libft.a
 MINILIBX = ./minilibx-linux/
 
-SRC = src/fractol.c \
-			src/graphics.c
-			
+SRC = src/main.c \
+	  src/fractal.c \
+	  src/zoom.c \
+	  src/keyboard.c \
+	  src/change_const.c \
+	  src/utils.c \
+	  src/malloc_mlx.c
+
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
@@ -17,12 +22,14 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	mkdir -p bin
 	make -C $(LIBDIR)
-	$(CC) $(OBJ) $(LIB) -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+	make -C $(MINILIBX)
+	$(CC) $(OBJ) $(LIB) -Lminilibx-linux -lmlx -L/usr/lib -Iminilibx-linux -lXext -lX11 -lm -lz -o $(NAME)
 
 .PHONY: all clean fclean re
 
 clean:
 	rm -f $(OBJ)
+	make clean -C $(MINILIBX)
 	make clean -C $(LIBDIR)
 
 fclean: clean

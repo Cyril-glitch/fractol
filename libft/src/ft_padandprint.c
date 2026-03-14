@@ -54,7 +54,7 @@ int	ft_padandprint(char *mid, int midlen, t_flags *f)
 
 	if (!mid)
 		return (-1);
-	pad = f->WIDTH - midlen;
+	pad = f->width - midlen;
 	count = 0;
 	if (f->minus)
 		count += ft_rightpad(mid, midlen, pad);

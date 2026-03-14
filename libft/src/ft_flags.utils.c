@@ -26,7 +26,7 @@ t_flags	*ft_flaginit(void)
 	f->space = 0;
 	f->plus = 0;
 	f->precision = 0;
-	f->WIDTH = 0;
+	f->width = 0;
 	return (f);
 }
 
@@ -39,17 +39,17 @@ void	ft_flagzero(t_flags *f)
 	f->space = 0;
 	f->plus = 0;
 	f->precision = 0;
-	f->WIDTH = 0;
+	f->width = 0;
 }
 
-static int	ft_widht_and_precision(const char *str, t_flags *f)
+static int	ft_width_and_precision(const char *str, t_flags *f)
 {
 	int	i;
 
 	i = 0;
 	if (str[i] >= '1' && str[i] <= '9')
 	{
-		f->WIDTH = ft_atoi(&str[i]);
+		f->width = ft_atoi(&str[i]);
 		while ((str[i] >= '0' && str[i] <= '9'))
 			i++;
 	}
@@ -81,7 +81,7 @@ int	ft_enableflags(const char *str, t_flags *f, int *count)
 		f->plus += (str[i] == '+');
 		i++;
 	}
-	i += ft_widht_and_precision(&str[i], f);
+	i += ft_width_and_precision(&str[i], f);
 	if (ft_isset(str[i], "cspdiuxX%"))
 	{
 		ft_normalize(f);
@@ -101,8 +101,8 @@ void	ft_normalize(t_flags *f)
 		f->zero = 0;
 	if (f->plus)
 		f->space = 0;
-	if (f->WIDTH < 0)
-		f->WIDTH *= -1;
+	if (f->width < 0)
+		f->width *= -1;
 	if (f->precision < 0)
 		f->precision *= -1;
 }
@@ -118,7 +118,7 @@ void	ft_normalize(t_flags *f)
    printf("' ' = %d\n",f->space);
    printf("+ = %d\n",f->plus);
    printf("preci = %d\n",f->precision);
-   printf("WIDTH = %d\n",f->WIDTH);
+   printf("width = %d\n",f->widht);
    printf("\n\n");
    printf("TEST\n\n");
    }

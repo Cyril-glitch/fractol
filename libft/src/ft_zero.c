@@ -21,8 +21,8 @@ int	ft_zero(t_flags *f, t_format *fmt)
 	prelen = 0;
 	if (fmt->prefix)
 		prelen = ft_strlen(fmt->prefix);
-	pad = (f->WIDTH - ft_strlen(fmt->precise)) - prelen;
-	if (!f->zero || !f->WIDTH || pad <= 0)
+	pad = (f->width - ft_strlen(fmt->precise)) - prelen;
+	if (!f->zero || !f->width || pad <= 0)
 		return (0);
 	tmp = malloc(sizeof(char) * (pad + 1));
 	if (!tmp)

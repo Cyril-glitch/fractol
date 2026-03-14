@@ -6,7 +6,7 @@
 /*   By: cycolonn <cycolonn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:56:38 by cycolonn          #+#    #+#             */
-/*   Updated: 2026/01/21 12:15:18 by cycolonn         ###   ########.fr       */
+/*   Updated: 2026/02/10 14:04:47 by cycolonn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,9 @@ void				ft_putnbr_fd(int n, int fd);
 int					ft_atoi(const char *nptr);
 long				ft_atol(const char *nbr);
 char				*ft_itoa(int n);
+char				*ft_dtoa(double d, int precision);
 void				ft_putnbr(int nbr);
+void				ft_putdouble(double d_n, int precision);
 void				ft_putnbr_base(int nbr, char *base);
 
 //listes
